@@ -113,6 +113,7 @@ export default class VideoPlayer extends Component {
     this.onEnd = this.onEnd.bind(this);
     this.onLoad = this.onLoad.bind(this);
     this.onPlayPress = this.onPlayPress.bind(this);
+    this.onSharePress = this.onSharePress.bind(this);
     this.onMutePress = this.onMutePress.bind(this);
     this.showControls = this.showControls.bind(this);
     this.onToggleFullScreen = this.onToggleFullScreen.bind(this);
@@ -207,6 +208,13 @@ export default class VideoPlayer extends Component {
     this.setState({
       isPlaying: !this.state.isPlaying,
     });
+    this.showControls();
+  }
+
+  onSharePress() {
+    if (this.props.onSharePress) {
+      this.props.onSharePress();
+    }
     this.showControls();
   }
 
@@ -449,7 +457,7 @@ export default class VideoPlayer extends Component {
           </TouchableOpacity>
         )}
         <TouchableOpacity
-          onPress={this.onPlayPress}
+          onPress={this.onSharePress}
           style={[customStyles.controlButton, customStyles.playControl]}
         >
           <Icon
@@ -585,6 +593,7 @@ VideoPlayer.propTypes = {
   onLoad: PropTypes.func,
   onStart: PropTypes.func,
   onPlayPress: PropTypes.func,
+  onSharePress: PropTypes.func,
   onHideControls: PropTypes.func,
   onShowControls: PropTypes.func,
 };
