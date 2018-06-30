@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   playControl: {
-    color: 'white',
+    color: 'red',
     padding: 8,
   },
   extraControl: {
