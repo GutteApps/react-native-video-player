@@ -424,7 +424,7 @@ export default class VideoPlayer extends Component {
         >
           <Icon
             style={[styles.playControl, customStyles.controlIcon, customStyles.playIcon]}
-            name={this.state.isPlaying ? 'pause' : 'play-arrow'}
+            name={this.state.isPlaying ? 'pause' : 'play'}
             size={32}
           />
         </TouchableOpacity>
@@ -433,7 +433,7 @@ export default class VideoPlayer extends Component {
           <TouchableOpacity onPress={this.onMutePress} style={customStyles.controlButton}>
             <Icon
               style={[styles.extraControl, customStyles.controlIcon]}
-              name={this.state.isMuted ? 'volume-off' : 'volume-up'}
+              name={this.state.isMuted ? 'volume-x' : 'volume-2'}
               size={24}
             />
           </TouchableOpacity>
@@ -442,7 +442,7 @@ export default class VideoPlayer extends Component {
           <TouchableOpacity onPress={this.onToggleFullScreen} style={customStyles.controlButton}>
             <Icon
               style={[styles.extraControl, customStyles.controlIcon]}
-              name="fullscreen"
+              name="maximize"
               size={32}
             />
           </TouchableOpacity>
