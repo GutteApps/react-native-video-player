@@ -452,7 +452,7 @@ export default class VideoPlayer extends Component {
         >
           <Icon
             style={[styles.playControl, customStyles.controlIcon, customStyles.playIcon]}
-            name={this.state.isPlaying ? 'pause' : 'play-arrow'}
+            name={'share'}
             size={32}
           />
         </TouchableOpacity>
