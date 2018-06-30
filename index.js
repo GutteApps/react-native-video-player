@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
   playArrow: {
     color: 'white',
+    left: 2
   },
   video: Platform.Version >= 24 ? {} : {
     backgroundColor: 'black',
@@ -453,7 +454,7 @@ export default class VideoPlayer extends Component {
         >
           <Icon
             style={[styles.playControl, customStyles.controlIcon, customStyles.playIcon]}
-            name={'share'}
+            name={Platform.OS === 'android' ? 'share-2' : 'share'}
             size={32}
           />
         </TouchableOpacity>
