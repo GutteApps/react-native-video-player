@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
-import VideoPlayer from 'react-native-video-player';
+import VideoPlayer from './../..';
 
 const VIMEO_ID = '179859217';
 
