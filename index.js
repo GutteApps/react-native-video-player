@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   playArrow: {
-    color: 'white',
+    color: 'red',
   },
   video: Platform.Version >= 24 ? {} : {
     backgroundColor: 'black',
