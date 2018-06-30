@@ -446,6 +446,16 @@ export default class VideoPlayer extends Component {
             />
           </TouchableOpacity>
         )}
+        <TouchableOpacity
+          onPress={this.onPlayPress}
+          style={[customStyles.controlButton, customStyles.playControl]}
+        >
+          <Icon
+            style={[styles.playControl, customStyles.controlIcon, customStyles.playIcon]}
+            name={this.state.isPlaying ? 'pause' : 'play-arrow'}
+            size={32}
+          />
+        </TouchableOpacity>
       </View>
     );
   }
