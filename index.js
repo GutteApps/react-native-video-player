@@ -346,7 +346,7 @@ export default class VideoPlayer extends Component {
         style={[styles.playButton, customStyles.playButton]}
         onPress={this.onStartPress}
       >
-        <Icon style={[styles.playArrow, customStyles.playArrow]} name="play-arrow" size={42} />
+        <Icon style={[styles.playArrow, customStyles.playArrow]} name="play" size={42} />
       </TouchableOpacity>
     );
   }
